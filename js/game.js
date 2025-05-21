@@ -1,26 +1,34 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-//
-// Created by: Kukwac
-// Created on: May 2020
-// This file contains the JS functions for index.html
-/* global Phaser */
+// Game Scene
 
-//* Game scene
+import SplashScene from './splashScene.js'
+
+// our game scene
+const SplashScene = new SplashScene()
+
 const config = {
     type: Phaser.AUTO,
     width: 1920,
-    height: 1080,
+    hegiht: 1080,
     physics: {
         default: 'arcade',
         arcade: {
             debug: true
         }
     },
+    // Set Background Color;
     backgroundColor: 0x5f6e7a,
     scale: {
         mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-    },
+        // We Place It in the middle of the page
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    }
 }
-const game = new Phaser.Game(config);
-console.log(game);
+
+const game = new Phaser.Game(config)
+
+// load scenes
+// Note: remember "key" is global and can not be reused.
+game.scene.add('splashScene', splashScene)
+
+// start title
+game.scene.start('splashScene')
