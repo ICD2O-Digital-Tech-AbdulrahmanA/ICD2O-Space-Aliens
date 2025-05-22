@@ -10,8 +10,8 @@ import TitleScene from "./titleScene.js";
 
 
 // our game scene
-const splashScene = new SplashScene()
-const titleScene = new TitleScene()
+const splashScene = new SplashScene();
+const titleScene = new TitleScene();
 
 //* Game scene
 const config = {
@@ -22,7 +22,7 @@ const config = {
         default: 'arcade',
         arcade: {
             debug: true
-        }
+        },
     },
     backgroundColor: 0xffffff,
     scale: {
@@ -30,7 +30,7 @@ const config = {
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
 }
-const game = new Phaser.Game(config);
+const game = new Phaser.Game(config)
 
 //load scenes
 game.scene.add('splashScene', splashScene)
