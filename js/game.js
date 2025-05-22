@@ -30,13 +30,13 @@ const config = {
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
 }
-const game = new Phaser.Game(config)
+const game = new Phaser.Game(config);
 
 //load scenes
-game.scene.add('splashScene', splashScene)
-game.scene.add('titleScene', titleScene)
+game.scene.add('splashScene', splashScene);
+game.scene.add('titleScene', titleScene);
 
 
 // start title
-game.scene.start('splashScene')
-game.scene.start('titleScene')
+game.scene.start('splashScene');
+game.scene.start('titleScene');
