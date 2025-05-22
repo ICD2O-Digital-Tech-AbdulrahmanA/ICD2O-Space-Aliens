@@ -1,6 +1,8 @@
 class SplashScene extends Phaser.Scene {
     constructor() {
         super({ key: 'splashScene' })
+
+        this.splashSceneBackgroundImage = null
     }
 
     init (data) {
