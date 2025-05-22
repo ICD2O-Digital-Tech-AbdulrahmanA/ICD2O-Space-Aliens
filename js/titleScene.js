@@ -14,7 +14,7 @@ class TitleScene extends Phaser.Scene {
         console.log('Title Scene')
     }
 
-    create (data) {       
+    create (data) {
     }
 
     update (time, delta) {
