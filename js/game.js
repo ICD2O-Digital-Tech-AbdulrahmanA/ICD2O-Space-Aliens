@@ -1,19 +1,18 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-//
-// Created by: Kukwac
-// Created on: May 2020
-// This file contains the JS functions for index.html
+// This file is part of the RST-ICD2O-DBZ-Aliens project
+// Copyright (C) 2025 RST-ICD2O-DBZ-Aliens
+// Made by Nebiyu Daniel
+// this is the phaser 3 configuration file
+
 /* global Phaser */
 
-import SplashScene from "./splashScene.js";
-import TitleScene from "./titleScene.js";
+//* Game scene */
 
+import SplashScene from './splashScene.js';
+import TitleScene from './titleScene.js';
 
-// our game scene
 const splashScene = new SplashScene();
 const titleScene = new TitleScene();
 
-//* Game scene
 const config = {
     type: Phaser.AUTO,
     width: 1920,
@@ -22,7 +21,7 @@ const config = {
         default: 'arcade',
         arcade: {
             debug: true
-        },
+        }
     },
     backgroundColor: 0xffffff,
     scale: {
@@ -30,13 +29,12 @@ const config = {
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
 }
+
 const game = new Phaser.Game(config);
 
-//load scenes
+
+//* Game scenes */
 game.scene.add('splashScene', splashScene);
 game.scene.add('titleScene', titleScene);
-
-
-// start title
+//* game title */
 game.scene.start('splashScene');
-game.scene.start('titleScene');
