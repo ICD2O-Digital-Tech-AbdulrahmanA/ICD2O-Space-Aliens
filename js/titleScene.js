@@ -17,12 +17,12 @@ class TitleScene extends Phaser.Scene {
   
   
     init (data) {
-    this.cameras.main.setBackgroundColor("AEA04B");
+        this.cameras.main.setBackgroundColor("AEA04B");
     }
   
     preload() {
         console.log('Title Scene');
-        this.preload.image('titleSceneBackground', 'assets/aliens_screen_image.jpg')
+        this.load.image('titleSceneBackground', 'assets/aliens_screen_image.jpg')
     }
   
     create(data) {
