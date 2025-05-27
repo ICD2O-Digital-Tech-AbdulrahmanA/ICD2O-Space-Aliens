@@ -1,5 +1,5 @@
 /* global phaser */
-// Created by: nebs
+// Created by: abdul
 // Created on: May 2025
 // This is the Title scene for the game
 
@@ -33,7 +33,10 @@ class TitleScene extends Phaser.Scene {
         this.titleSceneText = this.add.text(1920 / 2, (1080 / 2) + 350, 'Space Aliens', this.titleSceneTextStyle).setOrigin(0.5)
     }
   
-    update (time, delta) { 
+    update(time, delta) { 
+        if (time > 6000) {
+            this.scene.switch('menuScene');
+        }
     }
   }
     export default TitleScene

@@ -1,6 +1,6 @@
-// This file is part of the RST-ICD2O-DBZ-Aliens project
-// Copyright (C) 2025 RST-ICD2O-DBZ-Aliens
-// Made by Nebiyu Daniel
+// This file is part of the  project
+// Copyright (C) 2025 
+// Made by Abdul
 // this is the phaser 3 configuration file
 
 /* global Phaser */
@@ -10,10 +10,13 @@
 import SplashScene from './splashScene.js';
 import TitleScene from './titleScene.js';
 import MenuScene from './menuScene.js';
+import GameScene from './gameScene.js';
 
 const splashScene = new SplashScene();
 const titleScene = new TitleScene();
-const menuScene = new MenuScene()
+const menuScene = new MenuScene();
+const gameScene = new GameScene()
+
 
 const config = {
     type: Phaser.AUTO,
@@ -39,6 +42,7 @@ const game = new Phaser.Game(config);
 game.scene.add('splashScene', splashScene);
 game.scene.add('titleScene', titleScene);
 game.scene.add('menuScene', menuScene);
+game.scene.add('gameScene', gameScene);
 
 //* game title */
 game.scene.start('splashScene');
