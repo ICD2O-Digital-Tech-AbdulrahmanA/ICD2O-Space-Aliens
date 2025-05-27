@@ -44,7 +44,7 @@ class GameScene extends Phaser.Scene {
         if (keyUpObj.isDown === true) {
             this.ship.y -= 15
             if (this.ship.y < 0) {
-                this.ship.x = 1080
+                this.ship.y = 1080
             }
         }
 
@@ -52,8 +52,8 @@ class GameScene extends Phaser.Scene {
 
         if (keyDownObj.isDown === true) {
             this.ship.y += 15
-            if (this.ship.x < 1080) {
-                this.ship.x = 0
+            if (this.ship.y < 1080) {
+                this.ship.y = 0
             }
         }
 
