@@ -1,11 +1,3 @@
-/* global phaser */
-// Created by: abdul
-// Created on: May 2025
-// This is the Game scene for the game
-
-/**
- * This class is the splash scene for the game
- */
 class GameScene extends Phaser.Scene {
     constructor() {
         super({ key: 'gameScene' });
@@ -16,8 +8,8 @@ class GameScene extends Phaser.Scene {
     }
   
   
-    init (data) {
-    this.cameras.main.setBackgroundColor("AEA04B");
+    init(data) {
+        this.cameras.main.setBackgroundColor("AEA04B");
     }
   
     preload() {
@@ -26,8 +18,8 @@ class GameScene extends Phaser.Scene {
         this.load.image('starBackground', 'assets/starBackground.png')
         this.load.image('ship', 'assets/spaceShip.png')
         this.load.image('missile', 'assets/missile.png')
+        // sound
         this.load.audio('laser', 'assets/laser1.wav')
-
     }
   
     create(data) {
@@ -37,9 +29,9 @@ class GameScene extends Phaser.Scene {
         this.ship = this.physics.add.sprite(1920 / 2, 1080 - 100, 'ship')
 
         this.missileGroup = this.physics.add.group()
-       }
+    }
   
-    update(time, delta) { 
+    update(time, delta) {
         
         const keyLeftObj = this.input.keyboard.addKey('LEFT')
         const keyRightObj = this.input.keyboard.addKey('RIGHT')
@@ -99,5 +91,5 @@ class GameScene extends Phaser.Scene {
             }
         })
     }
-  }
+}    
     export default GameScene
